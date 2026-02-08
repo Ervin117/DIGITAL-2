@@ -11,8 +11,8 @@
 #define F_CPU 16000000
 #include <avr/io.h>
 
-void initADC(void); 
-uint16_t lecADC(uint8_t canal); 
+void initADC(void);
+uint16_t lecADC(uint8_t canal);
 
 
 #endif /* ADC_H_ */

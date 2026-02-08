@@ -215,6 +215,7 @@ int main(void)
 	
 	while (1)
 	{
+		//logia para llamar a la función de muestro de leds
 		if (band == 1)
  130:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
  134:	81 30       	cpi	r24, 0x01	; 1
@@ -362,10 +363,9 @@ ISR(SPI_STC_vect)
 		spi_alter = spivalor; 
  204:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <spivalor>
  208:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <spi_alter>
-		band = 1; 
+		band = 1;  
  20c:	81 e0       	ldi	r24, 0x01	; 1
  20e:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
-		//mostrarleds(spivalor); 
 	}
  212:	8f 91       	pop	r24
  214:	0f 90       	pop	r0
